@@ -44,7 +44,7 @@ conda activate <NAME_ENVIRONMENT>
 3. Instala las dependencias:
 
 ```bash
-conda install conda-forge::python-dotenv
+ 
 conda install -c esri arcgis jupyter pandas numpy
 ```
 
@@ -101,7 +101,34 @@ Si necesitas usar servicios privados o aumentar los límites de uso, puedes conf
 1. Obtén tu API Key desde [ArcGIS Developers](https://developers.arcgis.com/)
 2. Configura la clave en el archivo de configuración correspondiente
 
+### Configuración de Cursor IDE y Skills
+
+Este proyecto está pensado para aprovechar las **skills de Cursor IDE** y facilitar el trabajo con GIS desde Python.
+
+- En este repositorio encontrarás una skill en:  
+  `.cursor/skills/gis-python-geomatics-geology/SKILL.md`
+
+#### Usar esta skill en Cursor
+
+1. Abre este proyecto con **Cursor**.
+2. Asegúrate de que la carpeta `.cursor/skills/` está incluida en el proyecto (ya debería estar en el repositorio).
+3. En Cursor, usa el chat del asistente y referencia la skill, por ejemplo:
+   - «Usa mi skill GIS definida en `SKILL.md` para ayudarme con este notebook.»
+4. (Opcional) Crea tus propias skills duplicando la carpeta existente:
+   - Copia `gis-python-geomatics-geology` con otro nombre dentro de `.cursor/skills/`.
+   - Ajusta el contenido de `SKILL.md` para tu nuevo caso de uso.
+
+De esta forma, cualquier persona que clone el repositorio podrá reutilizar tu configuración de skills en Cursor o definir las suyas propias.
+
 ## 📝 Ejemplos de Uso
+
+### Listado de notebooks de ejemplo
+
+- **Geocodificación y visualización de resultados** (`geocode.ipynb`):  
+  Permite introducir direcciones o lugares, geocodificarlos usando ArcGIS Online y representar los puntos resultantes sobre un mapa.
+  
+- **Visualización básica de mapas** (`map_visualizer.ipynb`):  
+  Muestra cómo autenticarse contra ArcGIS Online, cargar un mapa base y visualizarlo de forma interactiva dentro de Jupyter.(EN PROGRESO)
 
 ### Autenticación básica en un notebook
 
